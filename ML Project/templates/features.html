@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .center
+    {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    text-align:center;
+    }
+</style>
+<body class="center">
+    <pre> 0   EmpNumber                     1200 non-null   object
+            1   Age                           1200 non-null   int64 
+            2   Gender                        1200 non-null   object
+            3   EducationBackground           1200 non-null   object
+            4   MaritalStatus                 1200 non-null   object
+            5   EmpDepartment                 1200 non-null   object
+            6   EmpJobRole                    1200 non-null   object
+            7   BusinessTravelFrequency       1200 non-null   object
+            8   DistanceFromHome              1200 non-null   int64 
+            9   EmpEducationLevel             1200 non-null   int64 
+            10  EmpEnvironmentSatisfaction    1200 non-null   int64 
+            11  EmpHourlyRate                 1200 non-null   int64 
+            12  EmpJobInvolvement             1200 non-null   int64 
+            13  EmpJobLevel                   1200 non-null   int64 
+            14  EmpJobSatisfaction            1200 non-null   int64 
+            15  NumCompaniesWorked            1200 non-null   int64 
+            16  OverTime                      1200 non-null   object
+            17  EmpLastSalaryHikePercent      1200 non-null   int64 
+            18  EmpRelationshipSatisfaction   1200 non-null   int64 
+            19  TotalWorkExperienceInYears    1200 non-null   int64 
+            20  TrainingTimesLastYear         1200 non-null   int64 
+            21  EmpWorkLifeBalance            1200 non-null   int64 
+            22  ExperienceYearsAtThisCompany  1200 non-null   int64 
+            23  ExperienceYearsInCurrentRole  1200 non-null   int64 
+            24  YearsSinceLastPromotion       1200 non-null   int64 
+            25  YearsWithCurrManager          1200 non-null   int64 
+            26  Attrition                     1200 non-null   object
+            27  PerformanceRating             1200 non-null   int64 </pre>
+
+    <ul>
+        <li>
+            <h3><strong>Finding out the mean performance of all the departments and plotting its bar graph using seaborn.</strong></h3>
+        </li>
+    </ul>
+    <pre>EmpDepartment
+            Data Science              3.050000
+            Development               3.085873
+            Finance                   2.775510
+            Human Resources           2.925926
+            Research &amp; Development    2.921283
+            Sales                     2.860590</pre>
+    <ul>
+        <li>
+            <h3><strong>Analysis of Department wise Perfomance</strong></h3>
+        </li>
+    </ul>
+    <img src="one_graph.png" alt="Analysis of Department wise Perfomance" height="320" width="420" />
+
+    <ul>
+        <li>
+            <h3><strong>Creating a new dataframe to analyze each department separately</strong></h3>
+        </li>
+    </ul>
+    <img src="multi_graph.png" alt="Analysis of Department wise Perfomance" height="320" width="420" />
+
+
+    <h3><strong>This is the the dataset we have used:</strong></h3>
+    <p><iframe width="558" height="480" src="https://onedrive.live.com/embed?cid=F40D5C6991F60AFF&amp;resid=F40D5C6991F60AFF%21106&amp;authkey=AHIkuFTa8_xHxmA&amp;em=2" frameborder="0" scrolling="no"></iframe></p>
+    <p></p>
+    <ul>
+        <li>
+            <h3><b> Finding out the correlation coefficient to find out which predictors are significant.</b></h3>
+        </li>
+    </ul>
+    <p><iframe width="580" height="440" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=F40D5C6991F60AFF%21116&amp;authkey=%21APBw1wK3SmQries&amp;em=2&amp;wdAllowInteractivity=False&amp;wdHideGridlines=True&amp;wdHideHeaders=True&amp;wdDownloadButton=True&amp;wdInConfigurator=True&amp;wdInConfigurator=True&amp;edesNext=true&amp;resen=false"></iframe></p>
+    <ul>
+        <li>
+            <h3><strong>Dropping the first columns as it is of no use for analysis.</strong></h3>
+        </li>
+    </ul>
+    <table border="1" class="dataframe">
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>EducationBackground</th>
+                <th>MaritalStatus</th>
+                <th>EmpDepartment</th>
+                <th>EmpJobRole</th>
+                <th>BusinessTravelFrequency</th>
+                <th>DistanceFromHome</th>
+                <th>EmpEducationLevel</th>
+                <th>EmpEnvironmentSatisfaction</th>
+                <th>...</th>
+                <th>EmpRelationshipSatisfaction</th>
+                <th>TotalWorkExperienceInYears</th>
+                <th>TrainingTimesLastYear</th>
+                <th>EmpWorkLifeBalance</th>
+                <th>ExperienceYearsAtThisCompany</th>
+                <th>ExperienceYearsInCurrentRole</th>
+                <th>YearsSinceLastPromotion</th>
+                <th>YearsWithCurrManager</th>
+                <th>Attrition</th>
+                <th>PerformanceRating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>0</th>
+                <td>32</td>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+                <td>5</td>
+                <td>13</td>
+                <td>2</td>
+                <td>10</td>
+                <td>3</td>
+                <td>4</td>
+                <td>...</td>
+                <td>4</td>
+                <td>10</td>
+                <td>2</td>
+                <td>2</td>
+                <td>10</td>
+                <td>7</td>
+                <td>0</td>
+                <td>8</td>
+                <td>0</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>47</td>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+                <td>5</td>
+                <td>13</td>
+                <td>2</td>
+                <td>14</td>
+                <td>4</td>
+                <td>4</td>
+                <td>...</td>
+                <td>4</td>
+                <td>20</td>
+                <td>2</td>
+                <td>3</td>
+                <td>7</td>
+                <td>7</td>
+                <td>1</td>
+                <td>7</td>
+                <td>0</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>40</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>5</td>
+                <td>13</td>
+                <td>1</td>
+                <td>5</td>
+                <td>4</td>
+                <td>4</td>
+                <td>...</td>
+                <td>3</td>
+                <td>20</td>
+                <td>2</td>
+                <td>3</td>
+                <td>18</td>
+                <td>13</td>
+                <td>1</td>
+                <td>12</td>
+                <td>0</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>41</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>3</td>
+                <td>8</td>
+                <td>2</td>
+                <td>10</td>
+                <td>4</td>
+                <td>2</td>
+                <td>...</td>
+                <td>2</td>
+                <td>23</td>
+                <td>2</td>
+                <td>2</td>
+                <td>21</td>
+                <td>6</td>
+                <td>12</td>
+                <td>6</td>
+                <td>0</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>60</td>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+                <td>5</td>
+                <td>13</td>
+                <td>2</td>
+                <td>16</td>
+                <td>4</td>
+                <td>1</td>
+                <td>...</td>
+                <td>4</td>
+                <td>10</td>
+                <td>1</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>0</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>5 rows &times; 27 columns</p>
+    <p></p>
+    <ul>
+        <li>
+            <h3><strong>Here we have selected only the important columns</strong></h3>
+        </li>
+    </ul>
+    <table border="1" class="dataframe">
+        <thead>
+            <tr>
+                <th>EmpDepartment</th>
+                <th>EmpJobRole</th>
+                <th>EmpEnvironmentSatisfaction</th>
+                <th>EmpLastSalaryHikePercent</th>
+                <th>EmpWorkLifeBalance</th>
+                <th>ExperienceYearsAtThisCompany</th>
+                <th>ExperienceYearsInCurrentRole</th>
+                <th>YearsSinceLastPromotion</th>
+                <th>YearsWithCurrManager</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>0</th>
+                <td>5</td>
+                <td>13</td>
+                <td>4</td>
+                <td>12</td>
+                <td>2</td>
+                <td>10</td>
+                <td>7</td>
+                <td>0</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>5</td>
+                <td>13</td>
+                <td>4</td>
+                <td>12</td>
+                <td>3</td>
+                <td>7</td>
+                <td>7</td>
+                <td>1</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>5</td>
+                <td>13</td>
+                <td>4</td>
+                <td>21</td>
+                <td>3</td>
+                <td>18</td>
+                <td>13</td>
+                <td>1</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>3</td>
+                <td>8</td>
+                <td>2</td>
+                <td>15</td>
+                <td>2</td>
+                <td>21</td>
+                <td>6</td>
+                <td>12</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>5</td>
+                <td>13</td>
+                <td>1</td>
+                <td>14</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <h2></h2>
+    <div class="dropdown">
+        <div class="dropdown-content"></div>
+    </div>
+    <p><strong></strong></p>
+
+</body>
+
+</html>

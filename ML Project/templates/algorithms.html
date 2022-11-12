@@ -1,0 +1,43 @@
+<html>  
+<head> 
+<style>
+.color-box {
+    width: 900px;
+    height: 790px;
+    display: inline-block;
+    background-color: rgb(255, 254, 254);
+    top: 0px;
+    left: 50%;
+    margin-right: -50%;
+    position: absolute;
+    transform: translate(-50%, 0%);   
+    padding: 15px;
+}
+
+.center
+{
+margin-left: auto;
+margin-right: auto;
+margin-top: 3%;
+text-align:center;
+}
+
+</style>
+</head>  
+<body style="background-color: #000000;">  
+
+
+<form class="color-box" method="POST" action="{{ url_for('algorithms_dropdown') }}">
+    <div class="center" style="margin-top: 30%;">
+        <div class="center">
+                <select name="comp_select" class="center" method="GET" action="/" style="width: 200px;">
+                {% for algo in algorithms %}
+                <option value="{{algo}}" selected>{{algo}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="center button">Go</button>
+    </div>
+</form>
+</body>  
+</html> 

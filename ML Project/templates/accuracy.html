@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .color-box {
+    width: 900px;
+    height: 790px;
+    display: inline-block;
+    background-color: rgb(255, 254, 254);
+    top: 0px;
+    left: 50%;
+    margin-right: -50%;
+    position: absolute;
+    transform: translate(-50%, 0%);   
+    padding: 15px;
+}
+
+.center
+{
+margin-left: auto;
+margin-right: auto;
+margin-top: 3%;
+text-align:center;
+}
+
+    </style>
+</head>
+<body style="background-color: #000000;">
+<div class="color-box">
+    <div class="center">
+        {% for acc in accuracies %}
+        <h2>{{acc}}{{accuracies[acc]}}</h2>
+        <!-- {{ table|safe }} -->
+    {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

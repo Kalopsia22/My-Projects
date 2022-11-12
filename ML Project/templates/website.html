@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.color-box {
+    width: 900px;
+    height: 790px;
+    display: inline-block;
+    background-color: rgb(255, 254, 254);
+    top: 0px;
+    left: 50%;
+    margin-right: -50%;
+    position: absolute;
+    transform: translate(-50%, 0%);   
+    padding: 15px;
+}
+
+.center
+{
+margin-left: auto;
+margin-right: auto;
+margin-top: 3%;
+text-align:center;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 2em;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 2px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 12em;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    border-radius: 50px;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+h1 {text-align: center;}
+
+</style>
+</head>
+<body style="background-color: #000000;">
+<div class="color-box" >
+
+<h1><i>Group number 10</i></h1>
+<p><b>Problem statement: </b> Create a GUI that include :
+    <ol style="list-style-type:lower-alpha">
+        <li>Consider any dataset of your choice</li>
+        <li>Display the features of the dataset</li>
+        <li>You will implement decision tree, neural network and support vector
+            machine for it</li>
+        <li>These three algorithms will be available in dropdown box. User will
+            select ay one algorithm. Then your program will show output by using
+            corresponding algorithm with its accuracy</li>
+        <li>Also plot comparative plot of accuracies of all the three algorithms.</li>
+    </ol></p>
+<table class="center">
+    <tr>
+        <th><button class="button button1" onclick="window.location.href = 'dataset.html';">Dataset</button></th>
+        <th><button class="button button1" onclick="window.location.href = 'features.html';">Features of dataset</button></th>
+    </tr>
+    <tr>
+        <th><button class="button button1" onclick="window.location.href = 'algorithms.html';">Algorithms</button></th>
+        <th><button class="button button1" onclick="window.location.href = 'accuracy.html';"">Accuracy of algorithms</button></th>
+    </tr>
+</table>
+<hr style="height:1.5px;background-color:black;">
+<h3>Group members</h3>
+<ul style="line-height: 2;">
+    <li>Afnanurrahim Ansari&ensp;&ensp;(27)</li>
+    <li>Amaan Khan&ensp;&ensp;(29)</li>
+    <li>Atharva Rewatkar&ensp;&ensp;(32)</li>
+    <li>Danish Kashmiri&ensp;&ensp;(50)</li>
+</ul>
+</div>
+</body>
+</html>
