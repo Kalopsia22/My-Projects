@@ -3,7 +3,7 @@
 ---
 # Contact Info 🔗
 
-## Your Full Name:- Atharva Rewatkar | Phone Number:- 9004927409 | Email:- atharvarewatkar050@gmail.com
+### Full Name:- Atharva Rewatkar | Phone Number:- 9004927409 | Email:- atharvarewatkar050@gmail.com
 
 A modular pipeline for detecting navigation-relevant objects (cones, barriers, stop signs)
 and estimating their distance from a robot's camera using monocular geometry.
